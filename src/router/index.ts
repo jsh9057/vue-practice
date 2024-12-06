@@ -1,15 +1,23 @@
-import Home from "../views/Home.vue";
+import Feed from "../views/FeedView.vue";
 import {createRouter, createWebHistory} from 'vue-router';
-import UserFeed from "../views/UserFeed.vue";
+import UserFeed from "../views/UserFeedView.vue";
+import Profile from "../views/ProfileView.vue";
 
 const routes = [
     {
         path: '/',
-        component: Home
+        name: 'Home',
+        component: Feed
     },
     {
-        path: '/feed',
+        path: '/my-feed',
+        name: 'MyFeed',
         component: UserFeed
+    },
+    {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile
     }
 ]
 
